@@ -1,6 +1,8 @@
 module.exports = {
   // Entry point for static analyzer
-  entry: './js/main.js',
+  entry: {
+    app: ['webpack/hot/dev-server', './js/main.js']
+  },
 
   output: {
     // Where to build results
