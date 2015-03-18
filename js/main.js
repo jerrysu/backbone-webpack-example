@@ -1,23 +1,26 @@
-'use strict';
+import 'es5-shim';
 
-require('es5-shim');
+import 'todomvc-common';
+import 'todomvc-common/base.css';
+import 'todomvc-app-css/index.css';
 
-require('todomvc-common');
-require('todomvc-common/base.css');
-require('todomvc-app-css/index.css');
+import AppView from 'views/app';
+import Backbone from 'backbone';
+import Demo from 'Demo.jsx';
+import React from 'react';
+import Workspace from 'routers/router';
+import $ from 'jquery';
 
-require('styles/main.css');
+import 'styles/main.css';
 
-require([
-	'backbone',
-	'views/app',
-	'routers/router'
-], function (Backbone, AppView, Workspace) {
-	/*jshint nonew:false*/
-	// Initialize routing and start Backbone.history()
-	new Workspace();
-	Backbone.history.start();
+// Initialize routing and start Backbone.history()
+new Workspace();
+Backbone.history.start();
 
-	// Initialize the application view
-	new AppView();
+// Initialize the application view
+$(function() {
+  new AppView()
+
+  // Add demo features
+  React.render(<Demo />, document.getElementById('demo'));
 });
