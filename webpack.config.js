@@ -24,5 +24,11 @@ module.exports = {
     alias: {
       'backboneLocalstorage': 'backbone.localstorage'
     }
+  },
+
+  module: {
+    loaders: [
+      {test: /\.css$/, loaders: ['style', 'css']}
+    ]
   }
 };
