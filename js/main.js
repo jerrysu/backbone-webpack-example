@@ -4,6 +4,8 @@ require('todomvc-common');
 require('todomvc-common/base.css');
 require('todomvc-app-css/index.css');
 
+require('styles/main.css');
+
 require([
 	'backbone',
 	'views/app',
