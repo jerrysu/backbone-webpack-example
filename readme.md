@@ -1,29 +1,28 @@
-# Backbone.js & RequireJS TodoMVC Example
+# Backbone.js & Webpack TodoMVC Example
 
-> Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface.
+This example uses Webpack to bundle all JavaScript and CSS dependencies in the app!
 
-> _[Backbone.js - backbonejs.org](http://backbonejs.org)_
+## Loaders
 
+For JavaScript:
 
-## Learning Backbone.js
+* [babel](http://babeljs.io/) - Turns ES6+ code into ES5-friendly code, supports React, JSX, and Flow as well
+* [react-hot](https://github.com/gaearon/react-hot-loader) - Enables live-editing of React components, preserving their state
+* [eslint](http://eslint.org/) - Add lint rules to enforce best practices, supports ES6, React, and JSX as well
+* [jshint](https://github.com/webpack/jshint-loader) - Similar to above
+* [markdown](https://github.com/peerigon/markdown-loader) - Loads markdown from a file that can then be easily rendered as HTML
+* [handlebars](https://github.com/altano/handlebars-loader), [mustache](https://github.com/deepsweet/mustache-loader), [ejs](https://github.com/okonet/ejs-loader), etc - Various flavors of templating
 
-The [Backbone.js website](http://backbonejs.org) is a great resource for getting started.
+For CSS:
 
-Here are some links you may find helpful:
+* [postcss]() - Transform CSS with autoprefixing, minification, RTL, etc.
+* [sass]() - Extends CSS with more traditional programming mechanisms (mixins, functions, etc.)
+* [less]() - Similar to above
+* [autoprefixer]() - Adds vendor prefixes to CSS
 
-* [Annotated source code](http://backbonejs.org/docs/backbone.html)
-* [Applications built with Backbone.js](http://backbonejs.org/#examples)
-* [FAQ](http://backbonejs.org/#faq)
+## Plug-ins
 
-Articles and guides from the community:
-
-* [Developing Backbone.js Applications](http://addyosmani.github.io/backbone-fundamentals)
-* [Collection of tutorials, blog posts, and example sites](https://github.com/documentcloud/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites)
-
-Get help from other Backbone.js users:
-
-* [Backbone.js on StackOverflow](http://stackoverflow.com/questions/tagged/backbone.js)
-* [Google Groups mailing list](https://groups.google.com/forum/#!forum/backbonejs)
-* [Backbone.js on Twitter](http://twitter.com/documentcloud)
-
-_If you have other helpful links to share, or find any of the links above no longer work, please [let us know](https://github.com/tastejs/todomvc/issues)._
+* [HotModuleReplacementPlugin](http://webpack.github.io/docs/list-of-plugins.html#hotmodulereplacementplugin) - Replaces JavaScript/CSS modules without reloading the browser
+* [I18n](https://github.com/webpack/i18n-webpack-plugin) - Create locale-specific bundles with translations baked in
+* [Rewire](https://github.com/jhnns/rewire-webpack) - Modify behavior of modules for easier unit testing in node.js
+* [UglifyJs](http://webpack.github.io/docs/list-of-plugins.html#uglifyjsplugin) - Minifies JavaScript output in bundles (use in a production config)
