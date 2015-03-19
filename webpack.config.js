@@ -23,13 +23,12 @@ module.exports = {
     modulesDirectories: ['js', 'node_modules'],
 
     // Replace modules with other modules or paths for compatibility or convenience
-    alias: {
-      'backboneLocalstorage': 'backbone.localstorage'
-    }
+    alias: {}
   },
 
   module: {
     loaders: [
+      {test: /\.js$/, loaders: ['babel?experimental'], exclude: /node_modules/},
       {test: /\.css$/, loaders: ['style', 'css']}
     ]
   }

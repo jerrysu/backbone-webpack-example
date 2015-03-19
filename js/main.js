@@ -1,5 +1,7 @@
 'use strict';
 
+require('es5-shim');
+
 require('todomvc-common');
 require('todomvc-common/base.css');
 require('todomvc-app-css/index.css');
