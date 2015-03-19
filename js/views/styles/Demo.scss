@@ -1,0 +1,17 @@
+.Demo {
+  color: black;
+
+  &-button {
+    border: 1px dotted #000;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+
+    &:hover {
+      color: blue;
+    }
+  }
+}
