@@ -9,7 +9,6 @@
     "forOf": true,
     "generators": true,
     "jsx": true,
-    "generators": true,
     "modules": true,
     "objectLiteralComputedProperties": true,
     "objectLiteralDuplicateProperties": true,
