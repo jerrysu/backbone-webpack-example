@@ -26,3 +26,5 @@ node_modules/todomvc-common/*
 
 node_modules/underscore/*
 !node_modules/underscore/underscore.js
+
+.idea
